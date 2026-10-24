@@ -34,7 +34,7 @@ services:
         condition: service_healthy
     restart: always
 
-  # Backend Gestion Employé
+  #Backend Gestion Employé
   backend-service:
     image: abdoulaye940/backend-employe:1.${BUILD_NUMBER}
     container_name: backend-employe-prod
