@@ -46,6 +46,8 @@ pipeline {
                     */
                     //linux
                     sh """
+                        echo "$DOCKER_PASS" 
+                    
                         docker login -u %DOCKER_USER% --password-stdin
                         docker push %DOCKERHUB_USER%/%IMAGE_NAME%:%IMAGE_TAG%
                     """
